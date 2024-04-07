@@ -1,0 +1,27 @@
+name : "Github Action CI/CD"
+
+run-name: "CI/CD Pipeline"
+
+on : 
+  push : 
+    branches:
+      - main
+
+
+jobs:
+  build : 
+    name : "CI/CD"
+    runs-on : ubuntu-latest
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v4
+
+      - name: "Setup Bun"
+        uses: oven-sh/setup-bun@v1
+        with:
+          node-version: "20"
+
+      - name : "Install Dependencies"
+        run : bun install
+      - name : "start"
+        run : bun start

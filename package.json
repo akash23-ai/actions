@@ -1,0 +1,19 @@
+{
+  "name": "actions",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun src/index.ts",
+    "build": "tsc -b"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "zod": "^3.22.4"
+  }
+}

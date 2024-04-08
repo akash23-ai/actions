@@ -6,7 +6,9 @@ on :
   push : 
     branches:
       - main
-
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build : 
@@ -25,3 +27,4 @@ jobs:
         run : bun install
       - name : "start"
         run : bun start
+
